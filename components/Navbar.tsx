@@ -21,13 +21,10 @@ export default function Navbar() {
 
                 {/* Right: Navigation Links */}
                 <div className="hidden md:flex items-center gap-8 md:gap-12 uppercase text-sm tracking-wider">
-                    <Link href="/" className="hover:opacity-60 transition-opacity">
-                        Home
-                    </Link>
                     <Link href="#projects" className="hover:opacity-60 transition-opacity">
                         Projects
                     </Link>
-                    <Link href="#contact" className="hover:opacity-60 transition-opacity">
+                    <Link href="/contact" className="hover:opacity-60 transition-opacity">
                         Contact
                     </Link>
                 </div>

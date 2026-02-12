@@ -41,8 +41,8 @@ const panchang = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Sophie Moore - Portfolio",
-  description: "Product Designer Portfolio",
+  title: "Marcell Németh - Portfolio",
+  description: "Full Stack Developer Portfolio",
 };
 
 export default function RootLayout({

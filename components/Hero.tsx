@@ -29,7 +29,7 @@ export default function Hero() {
                     Full Stack Developer From Hungary
                 </h1>
                 <p className="text-md md:text-xl text-black/60">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Senectus arcu nulla viverra arcu.
+                    Based in Hungary, coding for the world. I am a developer who loves crafting robust software. Let us build something amazing together.
                 </p>
                 <button className="w-fit mt-8 px-6 py-3 bg-black uppercase font-semibold text-white rounded-full hover:bg-gray-800 transition-colors">
                     Contact Me

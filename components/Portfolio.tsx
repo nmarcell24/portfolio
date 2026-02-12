@@ -13,9 +13,9 @@ export default function Portfolio() {
     gsap.registerPlugin(ScrollTrigger);
 
     useGSAP(() => {
-        gsap.to(".title", {
+        gsap.to(".section", {
             scrollTrigger: {
-                trigger: ".title",
+                trigger: ".section",
                 start: "top 70%",
                 end: "bottom top",
             },
@@ -26,7 +26,7 @@ export default function Portfolio() {
     })
 
     return (
-        <section className="w-full min-h-screen relative overflow-hidden flex flex-col title opacity-0 y-10">
+        <section id="projects" className="w-full min-h-screen relative overflow-hidden flex flex-col section opacity-0 y-10">
             <h1 className="text-3xl md:text-5xl lg:text-5xl font-semibold uppercase py-16 md:py-20 leading-[0.9]">
                 Portfolio
             </h1>
@@ -54,9 +54,9 @@ export default function Portfolio() {
                 ))}
 
                 <div className="w-full h-full flex justify-center">
-                    <button className="w-fit px-12 py-4 md:py-6 md:text-lg bg-black uppercase font-semibold text-white rounded-full hover:bg-gray-800 transition-colors">
+                    <a href={"https://github.com/nmarcell24/"} target="_blank" className="w-fit px-12 py-4 md:py-6 md:text-lg bg-black uppercase font-semibold text-white rounded-full hover:bg-gray-800 transition-colors">
                         View All Projects
-                    </button>
+                    </a>
                 </div>
             </div>
         </section>
