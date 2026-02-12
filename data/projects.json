@@ -26,6 +26,7 @@
         "id": 2,
         "title": "Car Rental Management System",
         "image": "/images/car-rental.png",
+        "url": "https://car-rental-app-ten-phi.vercel.app",
         "technologies": [
             "Java Spring Boot",
             "React",
