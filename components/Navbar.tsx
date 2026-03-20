@@ -3,14 +3,18 @@
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 export default function Navbar() {
+    const pathname = usePathname();
+
     useGSAP(() => {
         gsap.to(".nav", {
             opacity: 1,
             duration: 0.6,
         })
     })
+
     return (
         <nav className="w-full flex flex-col bg-light-gray font-semibold border-b-2 border-black opacity-0 nav">
             <div className="flex items-center justify-between py-6 w-full text-black">
@@ -21,12 +25,16 @@ export default function Navbar() {
 
                 {/* Right: Navigation Links */}
                 <div className="hidden md:flex items-center gap-8 md:gap-12 uppercase text-sm tracking-wider">
-                    <Link href="#projects" className="hover:opacity-60 transition-opacity">
-                        Projects
-                    </Link>
-                    <Link href="/contact" className="hover:opacity-60 transition-opacity">
-                        Contact
-                    </Link>
+                    {pathname !== "/contact" && (
+                        <>
+                            <Link href="#projects" className="hover:opacity-60 transition-opacity">
+                                Projects
+                            </Link>
+                            <Link href="/contact" className="hover:opacity-60 transition-opacity">
+                                Contact
+                            </Link>
+                        </>
+                    )}
                 </div>
                 <button className="md:hidden">
                     <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">

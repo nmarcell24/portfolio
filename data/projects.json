@@ -2,7 +2,11 @@
     {
         "id": 1,
         "title": "AI Virtual Try-On",
-        "image": "/images/try-on.png",
+        "images": [
+            "/images/try-on.png",
+            "/images/try-on-2.png",
+            "/images/studio_mode.png"
+        ],
         "url": "https://try-on-gamma.vercel.app/en",
         "technologies": [
             "Next.js",
@@ -25,7 +29,9 @@
     {
         "id": 2,
         "title": "Car Rental Management System",
-        "image": "/images/car-rental.png",
+        "images": [
+            "/images/car-rental.png"
+        ],
         "url": "https://car-rental-app-ten-phi.vercel.app",
         "technologies": [
             "Java Spring Boot",

@@ -35,7 +35,7 @@ export default function Portfolio() {
                     <Link href={`/projects/${project.id}`} key={project.title} className={`flex flex-col lg:flex-row lg:gap-12 justify-between pb-16 ${index < projects.length - 1 ? "border-b-2 border-black mb-12" : "mb-0"}`}>
                         <div className="w-full h-full flex justify-center lg:w-1/2">
                             <Image
-                                src={project.image}
+                                src={project.images[0]}
                                 alt={project.title}
                                 width={1000}
                                 height={1000}

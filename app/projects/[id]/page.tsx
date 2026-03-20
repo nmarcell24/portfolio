@@ -2,10 +2,15 @@ import { caption, displayText } from "@/app/utils/styles";
 import { CustomLink } from "@/components/CustomLink";
 import projects from "@/data/projects.json";
 import Image from "next/image";
+import { notFound } from "next/navigation";
 
 export default async function ProjectPage({ params }: { params: Promise<{ id: string }> }) {
     const { id } = await params;
     const project = projects.find((project) => project.id === Number(id));
+
+    if(!project){
+        notFound();
+    }
 
     return (
         <div className="flex flex-col items-center justify-center">
@@ -15,7 +20,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ id: st
                 <CustomLink text="Website" url={project?.url || "#"} />
             </section>
             <Image
-                src={project?.image || "/images/hero-portrait.png"}
+                src={project?.images[0]}
                 alt={project?.title || "Project"}
                 width={1000}
                 height={1000}
@@ -35,6 +40,15 @@ export default async function ProjectPage({ params }: { params: Promise<{ id: st
                 <article className="border-b-2 pb-16 mb-26">
                     <h2 className={`${displayText} mb-6`}>About the project</h2>
                     <div className={caption}>{renderDescription(project?.description || "")}</div>
+                    {project?.images[1] && <div className="w-full h-full flex justify-center mt-12">
+                        <Image
+                            src={project?.images[1]}
+                            alt={project?.title || "Project"}
+                            width={1000}
+                            height={1000}
+                            className="object-cover object-center"
+                        />
+                    </div>}
                 </article>
                 <article>
                     <h2 className={`${displayText} mb-12`}>Features</h2>
@@ -46,6 +60,15 @@ export default async function ProjectPage({ params }: { params: Promise<{ id: st
                         ))}
                     </div>
                 </article>
+                {project?.images[2] && <div className="w-full h-full flex justify-center mt-12">
+                    <Image
+                        src={project?.images[2]}
+                        alt={project?.title || "Project"}
+                        width={1000}
+                        height={1000}
+                        className="object-cover object-center"
+                    />
+                </div>}
             </div>
         </div>
     );

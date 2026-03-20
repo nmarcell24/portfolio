@@ -3,6 +3,7 @@
 import Image from "next/image";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
+import Link from "next/link";
 
 export default function Hero() {
     const t = gsap.timeline();
@@ -31,9 +32,9 @@ export default function Hero() {
                 <p className="text-md md:text-xl text-black/60">
                     Based in Hungary, coding for the world. I am a developer who loves crafting robust software. Let us build something amazing together.
                 </p>
-                <button className="w-fit mt-8 px-6 py-3 bg-black uppercase font-semibold text-white rounded-full hover:bg-gray-800 transition-colors">
+                <Link href="/contact" className="w-fit mt-8 px-6 py-3 bg-black uppercase font-semibold text-white rounded-full hover:bg-gray-800 transition-colors pointer-events-auto">
                     Contact Me
-                </button>
+                </Link>
             </div>
             {/* image section */}
             <div className="relative w-full h-[100vh] lg:absolute lg:top-1/2 lg:-translate-y-1/2 lg:right-0 lg:w-[45vw] xl:h-[80vh]">
