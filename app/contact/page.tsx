@@ -98,6 +98,7 @@ export default function ContactPage() {
                         <div className="p-6 md:p-10 border-b border-black md:border-r">
                             <label htmlFor="name" className="block text-sm font-bold uppercase mb-4">Name</label>
                             <input
+                                required
                                 type="text"
                                 id="name"
                                 name="name"
@@ -112,6 +113,7 @@ export default function ContactPage() {
                         <div className="p-6 md:p-10 border-b border-black">
                             <label htmlFor="email" className="block text-sm font-bold uppercase mb-4">Email</label>
                             <input
+                                required
                                 type="email"
                                 id="email"
                                 name="email"
@@ -124,7 +126,7 @@ export default function ContactPage() {
 
                         {/* Phone Field */}
                         <div className="p-6 md:p-10 border-b border-black md:border-r">
-                            <label htmlFor="phone" className="block text-sm font-bold uppercase mb-4">Phone</label>
+                            <label htmlFor="phone" className="block text-sm font-bold uppercase mb-4">Phone <span className="font-normal italic pl-2"> (optional)</span></label>
                             <input
                                 type="tel"
                                 id="phone"
@@ -140,6 +142,7 @@ export default function ContactPage() {
                         <div className="p-6 md:p-10 border-b border-black">
                             <label htmlFor="subject" className="block text-sm font-bold uppercase mb-4">Subject</label>
                             <input
+                                required
                                 type="text"
                                 id="subject"
                                 name="subject"
@@ -155,6 +158,7 @@ export default function ContactPage() {
                     <div className="w-full p-6 md:p-10">
                         <label htmlFor="message" className="block text-sm font-bold uppercase mb-4">Message</label>
                         <textarea
+                            required
                             id="message"
                             name="message"
                             onChange={handleChange}

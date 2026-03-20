@@ -46,7 +46,7 @@ export const Contact = () => {
                 <h1 className="text-3xl md:text-5xl lg:text-5xl font-semibold uppercase  leading-[0.9] max-w-2xl">
                     Get in touch to work together
                 </h1>
-                <p className="text-lg md:text-2xl max-w-3xl">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Senectus arcu nulla viverra arcu.</p>
+                <p className="text-lg md:text-3xl max-w-4xl">I’m always open to new opportunities and collaborations. If you have a project in mind or just want to say hello, feel free to reach out!</p>
                 <Link href={"/contact"} className="w-fit px-12 py-4 md:py-6 md:text-lg bg-black uppercase font-semibold text-white rounded-full hover:bg-gray-800 transition-colors">
                     Send me a message
                 </Link>
