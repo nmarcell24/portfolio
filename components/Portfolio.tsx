@@ -32,7 +32,7 @@ export default function Portfolio() {
             </h1>
             <div className="flex flex-col justify-between items-center">
                 {projects.map((project, index) => (
-                    <Link href={`/projects/${project.id}`} key={project.title} className={`flex flex-col lg:flex-row lg:gap-12 justify-between pb-16 ${index < projects.length - 1 ? "border-b-2 border-black mb-12" : "mb-0"}`}>
+                    <Link href={`/projects/${project.id}`} key={project.title} className={`flex flex-col lg:flex-row lg:gap-12 justify-between pb-16 group ${index < projects.length - 1 ? "border-b-2 border-black mb-12" : "mb-0"}`}>
                         <div className="w-full h-full flex justify-center lg:w-1/2">
                             <Image
                                 src={project.images[0]}
@@ -47,7 +47,7 @@ export default function Portfolio() {
                                 {project.title}
                             </h1>
                             <h3 className={caption}>
-                                Read case study <ChevronRight className="inline-block" />
+                                Read case study <ChevronRight className="inline-block group-hover:translate-x-2 transition-transform" />
                             </h3>
                         </div>
                     </Link>
